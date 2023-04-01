@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
- <link rel="icon" href="/static/logo-2.png"> 
+{% include 'bootstrap.html' %}
+{% include 'favicon.html' %}
 <title>nRyde</title>
 </head>
-  <style>
-    #banner{
-    height: 360px;
-    width: 100%;
-    object-fit: cover;
-    margin-bottom: 16px;
-    }
-    #img-3{
-      height: 300px;
-      width: 100%;
-      object-fit: cover;
-      border-radius: 40px;
-    }
-  </style>
+  
   <body>
     {% include 'nav.html' %}
+    <div class="mt-4"> </div>
     <div class="container"> 
-        <img src="/static/img-2.jpg" id="banner" class="img-fluid">
-        <h1 class="text-center mt-2 mb-4">{{company_name}} Jobs</h1>
+        {% include 'banner.html' %}
+        <h1 class="text-center mt-2 mb-4"> nRyde  Jobs</h1>
         <!--    <h2 class="text-center  mt-2 mb-4">About nRyde</h2> -->
       <div class="row" style="margin: 60px 0 20px 0">
         <div class="col-md-6">
@@ -44,10 +30,12 @@
         {% for job in jobs %}  
         <!--        job position added -->
         {% include 'joblist.html' %}
+
+          
         {% endfor %}
       </div>
       <div class="text-center">
-        <a href="mailto:josiahm681@email.com?subject=Question%20about%20Job%20opening&body=My%20Name%3A%20%3Cname%3E%0D%0AMy%20Question%3A%20%3CEnter%20question%3E%0D%0A" class="btn btn-primary btn-lg">Contact Us</a>
+        <a href" class="btn btn-primary btn-lg">Contact Us</a>
       </div>
     </div>
     {% include 'fotter.html' %}
