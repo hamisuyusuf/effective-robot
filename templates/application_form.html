@@ -1,29 +1,38 @@
+{% include 'form_style.html'%}
 <div class="container">
   <h4>Application Form</h4>
   <form action="/job/{{'id'}}/apply" method="post">
-		<label for="name">Name:</label><br>
-		<input type="text" id="name" name="name"><br><br>
-		
-		<label for="email">Email:</label><br>
-		<input type="email" id="email" name="email"><br><br>
-		
-		<label for="linkedIn">LinkedIn URL:</label><br>
-		<input type="url" id="linkedIn" name="linkedin_url"><br><br>
-		
-		<label for="gender">Gender:</label>
-		<select id="gender" name="gender">
-			<option value="male">Male</option>
-			<option value="female">Female</option>
-			<option value="other">Other</option>
-		</select><br><br>
-		
-		<label for="message">Message:</label><br>
-		<textarea id="message" name="message"></textarea><br><br>
-    <label for="message">Message:</label><br>
-		<textarea id="message" name="message"></textarea><br><br>
-    <label for="resume_link">Resume Link</label><br>
-		<input type="link" id="resume_link" name="resume_link"><br><br>
-		
-		<button type="submit">Submit</button>
+    <div class="mb-2">
+  		<label for="name">Name</label><br>
+  		<input type="text" id="name" name="name" required><br><br>
+
+    </div>  
+  	<div class="mb-2">	
+  		<label for="email">Email</label><br>
+  		<input type="email" id="email" name="email" required><br><br>
+    </div>
+    
+  	<div class="mb-2">
+  		<label for="linkedIn">LinkedIn URL</label><br>
+  		<input type="url" id="linkedIn_url" name="linkedIn_url" required><br><br>
+    </div>  
+    
+    <div class="mb-2">
+  		
+  		
+<!--   	<div class="mb-2">	
+  		<label for="message">Why Apply</label><br>
+  		<textarea id="message" name="message"></textarea><br><br>
+    </div>
+      
+    <div class="mb-2">
+      <label for="message">Previous Role </label><br>
+  		<textarea id="role" name="role"></textarea><br><br>
+    </div> -->
+    <div class="mb-2">  
+      <label for="resume_link" required>Resume Link</label><br>
+  		<input type="link" id="resume_link" name="resume_link"><br><br>
+		</div>
+		<button type="submit" class="mr-4">Submit</button>
 	</form>
 </div>

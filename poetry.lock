@@ -36,6 +36,22 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-admin"
+version = "1.6.1"
+description = "Simple and extensible admin interface framework for Flask"
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Flask = ">=0.7"
+wtforms = "*"
+
+[package.extras]
+aws = ["boto"]
+azure = ["azure-storage-blob"]
+
+[[package]]
 name = "flask-sqlalchemy"
 version = "3.0.3"
 description = "Add SQLAlchemy support to your Flask application."
@@ -146,15 +162,30 @@ MarkupSafe = ">=2.1.1"
 [package.extras]
 watchdog = ["watchdog"]
 
+[[package]]
+name = "wtforms"
+version = "3.0.1"
+description = "Form validation and rendering for Python web development."
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+MarkupSafe = "*"
+
+[package.extras]
+email = ["email-validator"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "a7b8823a4ecda6ca0e9d1c31ab11d6427d9ee411aa70b88f327495b068b63235"
+content-hash = "ddbf0ee39ca555c5c64c3e092a7baeb8e4e5aa90c7e417c9ba42a9586926abf5"
 
 [metadata.files]
 click = []
 colorama = []
 flask = []
+flask-admin = []
 flask-sqlalchemy = []
 greenlet = []
 itsdangerous = []
@@ -163,3 +194,4 @@ markupsafe = []
 sqlalchemy = []
 typing-extensions = []
 werkzeug = []
+wtforms = []

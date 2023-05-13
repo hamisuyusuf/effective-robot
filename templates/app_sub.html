@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'bootstrap.html' %}
+    {% include 'favicon.html' %}
+    <title> Appilication Submitted </title>
+  </head>
+
+  <body>
+     {% include 'nav.html' %}
+    <div class="mt-4">
+      
+    </div>
+    <div class="container">
+      {% include 'banner.html' %}
+        <h1 class="text-center mt-2 mb-4"> nRyde  Jobs</h1>
+        
+      <p>Your Application for the role  has been Summited </p>
+      
+     <h4 class="mb-0">Name</h4>
+     <div class="mb-2"> {{application['name']}}</div>
+
+     <b>Email</b>
+     <div class="mb-2">{{application['email']}}</div>
+    
+     <b>LinkedIn URL</b>
+     <div class="mb-2">{{application['linkedIn_url']}}</div>
+
+    <b>Gender</b>
+     <div class="mb-2">{{application['gender']}}</div>
+
+
+<!--     <h4>Why Apply</h4> -->
+<!--      <div class="mb-2">{{application['message']}}</div> -->
+
+<!--     <h4>Previous Role</h4> -->
+<!--      <div class="mb-2">{{application['role']}}</div> -->
+
+   <b>Resume Link</b>
+     <div class="mb-2">{{application['resume_link']}}</div>
+    </div>
+
+     {% include 'fotter.html' %}
+    
+  </body>
+</html>
