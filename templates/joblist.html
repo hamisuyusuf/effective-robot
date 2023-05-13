@@ -6,19 +6,12 @@
  <div>
    <b>Location:</b> {{job['location']}}
  </div>
-  <div> 
-   <b>Responsibilities:</b> {{job['responsibilities']}}
- </div>
-  <div> 
-   <b>Requirements:</b> {{job['requirements']}}
- </div>
  <div> 
-   <b>Salary:</b> {{job['salary']}}
+   <b>Salary:</b> {{job['currency']}}{{job['salary']}}
  </div>
  
 </div>
  <div class="col-2 padding-right:16px">
       <a href="/job/{{job['id']}}"   type="button" class="btn btn-outline-primary">Apply</a>
-  </div>
-
+ </div>
 </div>
